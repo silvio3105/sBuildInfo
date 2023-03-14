@@ -26,7 +26,8 @@ var NAVTREE =
 [
   [ "Simple Build Info", "index.html", [
     [ "Simple Build Info library", "md__r_e_a_d_m_e.html", [
-      [ "License", "md__r_e_a_d_m_e.html#autotoc_md1", null ]
+      [ "Linker file example", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "License", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
     ] ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", "annotated.html", [

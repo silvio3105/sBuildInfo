@@ -97,6 +97,43 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 <div class="textblock"><p >Simple Build Info is library that provides easy way to write build(compile) info in flash memory. Build Info is useful when verifying new firmware before firmware update via (custom) bootloader. User must create <code>buildInfo</code> section in GCC linker file. Recomendation is to put <code>buildInfo</code> section right above vector table.</p>
 <p >Library documentation is available at <code>.docs/html/index.html</code>. Example applications are available at <code>examples</code> folder. All examples are made for STM32.</p>
 <h1><a class="anchor" id="autotoc_md1"></a>
+Linker file example</h1>
+<div class="fragment"><div class="line">/* Define output sections */</div>
+<div class="line">SECTIONS</div>
+<div class="line">{</div>
+<div class="line">  /* The startup code goes first into FLASH */</div>
+<div class="line">  .isr_vector :</div>
+<div class="line">  {</div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">    KEEP(*(.isr_vector)) /* Startup code */</div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">  } &gt;FLASH</div>
+<div class="line"> </div>
+<div class="line">  /*.buildData :</div>
+<div class="line">  {</div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">    KEEP(*(.buildData))</div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">  } &gt;FLASH*/</div>
+<div class="line"> </div>
+<div class="line">  /* The program code and other data goes into FLASH */</div>
+<div class="line">  .text :</div>
+<div class="line">  {</div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">    *(.buildInfo)</div>
+<div class="line">    *(.text)           /* .text sections (code) */</div>
+<div class="line">    *(.text*)          /* .text* sections (code) */</div>
+<div class="line">    *(.glue_7)         /* glue arm to thumb code */</div>
+<div class="line">    *(.glue_7t)        /* glue thumb to arm code */</div>
+<div class="line">    *(.eh_frame)</div>
+<div class="line"> </div>
+<div class="line">    KEEP (*(.init))</div>
+<div class="line">    KEEP (*(.fini))</div>
+<div class="line"> </div>
+<div class="line">    . = ALIGN(4);</div>
+<div class="line">    _etext = .;        /* define a global symbols at end of code */</div>
+<div class="line">  } &gt;FLASH</div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md2"></a>
 License</h1>
 <p >Copyright (c) 2023, silvio3105 (www.github.com/silvio3105)</p>
 <p >Access and use of this Project and its contents are granted free of charge to any Person. The Person is allowed to copy, modify and use The Project and its contents only for non-commercial use. Commercial use of this Project and its contents is prohibited. Modifying this License and/or sublicensing is prohibited.</p>
@@ -110,7 +147,7 @@ License</h1>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 14 2023 19:13:03 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Tue Mar 14 2023 19:29:09 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
