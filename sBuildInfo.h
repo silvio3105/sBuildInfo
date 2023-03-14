@@ -76,7 +76,7 @@ struct build_info_t {
 
 
 // ----- EXTERNS
-extern build_info_t buildInfo;
+extern const build_info_t buildInfo;
 
 
 /** @} */
