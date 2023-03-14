@@ -8,6 +8,47 @@ Library documentation is available at `.docs/html/index.html`.
 Example applications are available at `examples` folder. All examples are made for STM32.
 
 
+# Linker file example
+
+```
+/* Define output sections */
+SECTIONS
+{
+  /* The startup code goes first into FLASH */
+  .isr_vector :
+  {
+    . = ALIGN(4);
+    KEEP(*(.isr_vector)) /* Startup code */
+    . = ALIGN(4);
+  } >FLASH
+
+  /*.buildData :
+  {
+	. = ALIGN(4);
+    KEEP(*(.buildData))
+	. = ALIGN(4);
+  } >FLASH*/
+
+  /* The program code and other data goes into FLASH */
+  .text :
+  {
+    . = ALIGN(4);
+    *(.buildInfo)
+    *(.text)           /* .text sections (code) */
+    *(.text*)          /* .text* sections (code) */
+    *(.glue_7)         /* glue arm to thumb code */
+    *(.glue_7t)        /* glue thumb to arm code */
+    *(.eh_frame)
+
+    KEEP (*(.init))
+    KEEP (*(.fini))
+
+    . = ALIGN(4);
+    _etext = .;        /* define a global symbols at end of code */
+  } >FLASH
+```
+
+
 # License
 
 Copyright (c) 2023, silvio3105 (www.github.com/silvio3105)
