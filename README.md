@@ -1,8 +1,8 @@
 
 # Simple Build Info library
 
-Simple Build Info is library that provides easy way to write build(compile) info in flash memory. Build Info is useful when verifying new firmware before firmware update via (custom) bootloader.
-User must create `buildInfo` section in GCC linker file. Recomendation is to put `buildInfo` section right above vector table.
+Simple Build Info is library that provides easy way to write build(compile) info into flash memory. Build Info is useful when verifying new firmware before firmware update via (custom) bootloader.
+User must create `buildInfo` section in GCC linker file. Recommendation is to place `buildInfo` section right below vector table.
 
 Library documentation is available at `.docs/html/index.html`.
 Example applications are available at `examples` folder. All examples are made for STM32.
