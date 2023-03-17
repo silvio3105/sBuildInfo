@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Simple Build Info library for placing build info in flash memory.</div>
   </td>
@@ -105,93 +105,159 @@ $(document).ready(function(){initNavTree('structbuild__info__t.html',''); initRe
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae48fec7a8dbe99f9438adbc3ab002315"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315">fwName</a> [16]</td></tr>
-<tr class="memdesc:ae48fec7a8dbe99f9438adbc3ab002315"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware name.  <a href="structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315">More...</a><br /></td></tr>
-<tr class="separator:ae48fec7a8dbe99f9438adbc3ab002315"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44ac198c82b37cc7a3a0fb6e26096fc1"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1">fwVer</a> [16]</td></tr>
-<tr class="memdesc:a44ac198c82b37cc7a3a0fb6e26096fc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware version.  <a href="structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1">More...</a><br /></td></tr>
-<tr class="separator:a44ac198c82b37cc7a3a0fb6e26096fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e989fd46a56827efe2a2d90f262d6c2"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#a1e989fd46a56827efe2a2d90f262d6c2">hwRev</a> [16]</td></tr>
-<tr class="memdesc:a1e989fd46a56827efe2a2d90f262d6c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for hardware revision.  <a href="structbuild__info__t.html#a1e989fd46a56827efe2a2d90f262d6c2">More...</a><br /></td></tr>
-<tr class="separator:a1e989fd46a56827efe2a2d90f262d6c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af89d5d8d4fc9cb0cfea2c2c3833d28e3"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#af89d5d8d4fc9cb0cfea2c2c3833d28e3">buildDate</a> [16]</td></tr>
-<tr class="memdesc:af89d5d8d4fc9cb0cfea2c2c3833d28e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for build date.  <a href="structbuild__info__t.html#af89d5d8d4fc9cb0cfea2c2c3833d28e3">More...</a><br /></td></tr>
-<tr class="separator:af89d5d8d4fc9cb0cfea2c2c3833d28e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff08327105c22f7492e60a2cd0b1814a"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a5731984dbc11cc2487bab5cfdeb25907"><td class="memItemLeft" >&#160;&#160;&#160;const char&#160;&#160;&#160;<a class="el" href="structbuild__info__t.html#ac52fed95c2bcc7df714d44fe0b6a53be">name</a> [16]</td></tr>
+<tr class="memdesc:a5731984dbc11cc2487bab5cfdeb25907"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware name.  <a href="structbuild__info__t.html#ac52fed95c2bcc7df714d44fe0b6a53be">More...</a><br /></td></tr>
+<tr class="separator:a5731984dbc11cc2487bab5cfdeb25907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140c961f51629a7ac1fc248d11efd8c1"><td class="memItemLeft" ><a id="a140c961f51629a7ac1fc248d11efd8c1" name="a140c961f51629a7ac1fc248d11efd8c1"></a>
+&#160;&#160;&#160;struct {</td></tr>
+<tr class="memitem:aa22991cf8c3f249ffd230ffd0dac16a3"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;const char&#160;&#160;&#160;<a class="el" href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">tag</a> [8]</td></tr>
+<tr class="memdesc:aa22991cf8c3f249ffd230ffd0dac16a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware tag.  <a href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">More...</a><br /></td></tr>
+<tr class="separator:aa22991cf8c3f249ffd230ffd0dac16a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b75ac6f5e6ba64548b5f8bd70f6b5e1"><td class="memItemLeft" >&#160;&#160;&#160;&#160;&#160;&#160;const char&#160;&#160;&#160;<a class="el" href="structbuild__info__t.html#a5be57f336742b4e045e34993062dd249">variant</a> [8]</td></tr>
+<tr class="memdesc:a5b75ac6f5e6ba64548b5f8bd70f6b5e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware variant name.  <a href="structbuild__info__t.html#a5be57f336742b4e045e34993062dd249">More...</a><br /></td></tr>
+<tr class="separator:a5b75ac6f5e6ba64548b5f8bd70f6b5e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a140c961f51629a7ac1fc248d11efd8c1"><td class="memItemLeft" valign="top">&#160;&#160;&#160;}&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a140c961f51629a7ac1fc248d11efd8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff08327105c22f7492e60a2cd0b1814a"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a">fw</a></td></tr>
+<tr class="memdesc:aff08327105c22f7492e60a2cd0b1814a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Union of firmware name, tag and variant.  <a href="structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a">More...</a><br /></td></tr>
+<tr class="separator:aff08327105c22f7492e60a2cd0b1814a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a976bc5db0c2361747612e48a508ecf"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf">fwVer</a> [16]</td></tr>
+<tr class="memdesc:a2a976bc5db0c2361747612e48a508ecf"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for firmware version.  <a href="structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf">More...</a><br /></td></tr>
+<tr class="separator:a2a976bc5db0c2361747612e48a508ecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0593166e277e1782cbe1cfbb4e543fb2"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#a0593166e277e1782cbe1cfbb4e543fb2">hwRev</a> [16]</td></tr>
+<tr class="memdesc:a0593166e277e1782cbe1cfbb4e543fb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for hardware revision.  <a href="structbuild__info__t.html#a0593166e277e1782cbe1cfbb4e543fb2">More...</a><br /></td></tr>
+<tr class="separator:a0593166e277e1782cbe1cfbb4e543fb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ae62628acea300883bb6ce85662ae9a"><td class="memItemLeft" align="right" valign="top">const char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a">buildDate</a> [12]</td></tr>
+<tr class="memdesc:a8ae62628acea300883bb6ce85662ae9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">C-string for build date.  <a href="structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a">More...</a><br /></td></tr>
+<tr class="separator:a8ae62628acea300883bb6ce85662ae9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Struct for build info. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00070">70</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00098">98</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
-<a id="af89d5d8d4fc9cb0cfea2c2c3833d28e3" name="af89d5d8d4fc9cb0cfea2c2c3833d28e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af89d5d8d4fc9cb0cfea2c2c3833d28e3">&#9670;&#160;</a></span>buildDate</h2>
+<a id="a8ae62628acea300883bb6ce85662ae9a" name="a8ae62628acea300883bb6ce85662ae9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae62628acea300883bb6ce85662ae9a">&#9670;&#160;</a></span>buildDate</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char build_info_t::buildDate[16]</td>
+          <td class="memname">const char build_info_t::buildDate[12]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>C-string for build date. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00074">74</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00112">112</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
-<a id="ae48fec7a8dbe99f9438adbc3ab002315" name="ae48fec7a8dbe99f9438adbc3ab002315"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae48fec7a8dbe99f9438adbc3ab002315">&#9670;&#160;</a></span>fwName</h2>
+<a id="aff08327105c22f7492e60a2cd0b1814a" name="aff08327105c22f7492e60a2cd0b1814a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff08327105c22f7492e60a2cd0b1814a">&#9670;&#160;</a></span></h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char build_info_t::fwName[16]</td>
+          <td class="memname">union  { ... }  build_info_t::fw</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>C-string for firmware name. </p>
-
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00071">71</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p>Union of firmware name, tag and variant. </p>
 
 </div>
 </div>
-<a id="a44ac198c82b37cc7a3a0fb6e26096fc1" name="a44ac198c82b37cc7a3a0fb6e26096fc1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a44ac198c82b37cc7a3a0fb6e26096fc1">&#9670;&#160;</a></span>fwVer</h2>
+<a id="a2a976bc5db0c2361747612e48a508ecf" name="a2a976bc5db0c2361747612e48a508ecf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a976bc5db0c2361747612e48a508ecf">&#9670;&#160;</a></span>fwVer</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char build_info_t::fwVer[16]</td>
+          <td class="memname">const char build_info_t::fwVer[16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>C-string for firmware version. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00072">72</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00110">110</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
-<a id="a1e989fd46a56827efe2a2d90f262d6c2" name="a1e989fd46a56827efe2a2d90f262d6c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e989fd46a56827efe2a2d90f262d6c2">&#9670;&#160;</a></span>hwRev</h2>
+<a id="a0593166e277e1782cbe1cfbb4e543fb2" name="a0593166e277e1782cbe1cfbb4e543fb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0593166e277e1782cbe1cfbb4e543fb2">&#9670;&#160;</a></span>hwRev</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char build_info_t::hwRev[16]</td>
+          <td class="memname">const char build_info_t::hwRev[16]</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>C-string for hardware revision. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00073">73</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00111">111</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="ac52fed95c2bcc7df714d44fe0b6a53be" name="ac52fed95c2bcc7df714d44fe0b6a53be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac52fed95c2bcc7df714d44fe0b6a53be">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char build_info_t::name[16]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C-string for firmware name. </p>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00104">104</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="a316848252b46080ed793e24753bf7ca9" name="a316848252b46080ed793e24753bf7ca9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a316848252b46080ed793e24753bf7ca9">&#9670;&#160;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char build_info_t::tag[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C-string for firmware tag. </p>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00106">106</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="a5be57f336742b4e045e34993062dd249" name="a5be57f336742b4e045e34993062dd249"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5be57f336742b4e045e34993062dd249">&#9670;&#160;</a></span>variant</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char build_info_t::variant[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>C-string for firmware variant name. </p>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00107">107</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -204,7 +270,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="structbuild__info__t.html">build_info_t</a></li>
-    <li class="footer">Generated on Tue Mar 14 2023 19:29:09 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Fri Mar 17 2023 19:57:20 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

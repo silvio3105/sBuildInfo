@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['fwname_0',['fwName',['../structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315',1,'build_info_t']]],
-  ['fwver_1',['fwVer',['../structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1',1,'build_info_t']]]
+  ['fw_0',['fw',['../structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a',1,'build_info_t']]],
+  ['fwver_1',['fwVer',['../structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf',1,'build_info_t']]]
 ];

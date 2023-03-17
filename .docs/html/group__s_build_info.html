@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Simple Build Info library for placing build info in flash memory.</div>
   </td>
@@ -108,16 +108,25 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
 <tr class="memitem:ga0171e1c527364c61edd4e6587d949b1e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#ga0171e1c527364c61edd4e6587d949b1e">SBUILD</a>(_name,  _ver,  _rev,  _date)</td></tr>
-<tr class="memdesc:ga0171e1c527364c61edd4e6587d949b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for creating build info struct in flash memory.  <a href="group__s_build_info.html#ga0171e1c527364c61edd4e6587d949b1e">More...</a><br /></td></tr>
+<tr class="memdesc:ga0171e1c527364c61edd4e6587d949b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for creating build info data in flash memory.  <a href="group__s_build_info.html#ga0171e1c527364c61edd4e6587d949b1e">More...</a><br /></td></tr>
 <tr class="separator:ga0171e1c527364c61edd4e6587d949b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ab27d79a6190efd3c7b409203a5bb07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">SBUILD_NAME</a>&#160;&#160;&#160;buildInfo.fwName</td></tr>
-<tr class="memdesc:ga2ab27d79a6190efd3c7b409203a5bb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for build firmware name.  <a href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">More...</a><br /></td></tr>
+<tr class="memitem:ga11c517c6ce1ee847fdabf024966d4905"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#ga11c517c6ce1ee847fdabf024966d4905">SBUILD_EXT</a>(_tag,  _variant,  _ver,  _rev,  _date)</td></tr>
+<tr class="memdesc:ga11c517c6ce1ee847fdabf024966d4905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for creating build info data in flash memory.  <a href="group__s_build_info.html#ga11c517c6ce1ee847fdabf024966d4905">More...</a><br /></td></tr>
+<tr class="separator:ga11c517c6ce1ee847fdabf024966d4905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ab27d79a6190efd3c7b409203a5bb07"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">SBUILD_NAME</a>&#160;&#160;&#160;buildInfo.fw.name</td></tr>
+<tr class="memdesc:ga2ab27d79a6190efd3c7b409203a5bb07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for firmware build name.  <a href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">More...</a><br /></td></tr>
 <tr class="separator:ga2ab27d79a6190efd3c7b409203a5bb07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87d2bceb8be1dc9da731239a74df0d34"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#ga87d2bceb8be1dc9da731239a74df0d34">SBUILD_TAG</a>&#160;&#160;&#160;buildInfo.fw.tag</td></tr>
+<tr class="memdesc:ga87d2bceb8be1dc9da731239a74df0d34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for firmware tag used in build.  <a href="group__s_build_info.html#ga87d2bceb8be1dc9da731239a74df0d34">More...</a><br /></td></tr>
+<tr class="separator:ga87d2bceb8be1dc9da731239a74df0d34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacb6039ec94c299b3f166f153f3229241"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#gacb6039ec94c299b3f166f153f3229241">SBUILD_VARIANT</a>&#160;&#160;&#160;buildInfo.fw.variant</td></tr>
+<tr class="memdesc:gacb6039ec94c299b3f166f153f3229241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for firmware variant used in build.  <a href="group__s_build_info.html#gacb6039ec94c299b3f166f153f3229241">More...</a><br /></td></tr>
+<tr class="separator:gacb6039ec94c299b3f166f153f3229241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0bac7b74c9a7a6d3ba9f4aa7cf3c758"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#gab0bac7b74c9a7a6d3ba9f4aa7cf3c758">SBUILD_VER</a>&#160;&#160;&#160;buildInfo.fwVer</td></tr>
-<tr class="memdesc:gab0bac7b74c9a7a6d3ba9f4aa7cf3c758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for build firmware version.  <a href="group__s_build_info.html#gab0bac7b74c9a7a6d3ba9f4aa7cf3c758">More...</a><br /></td></tr>
+<tr class="memdesc:gab0bac7b74c9a7a6d3ba9f4aa7cf3c758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for firmware build version.  <a href="group__s_build_info.html#gab0bac7b74c9a7a6d3ba9f4aa7cf3c758">More...</a><br /></td></tr>
 <tr class="separator:gab0bac7b74c9a7a6d3ba9f4aa7cf3c758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab12448dbdf69959889dc349ef75192f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#gab12448dbdf69959889dc349ef75192f1">SBUILD_REV</a>&#160;&#160;&#160;buildInfo.hwRev</td></tr>
-<tr class="memdesc:gab12448dbdf69959889dc349ef75192f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for build hardware revision.  <a href="group__s_build_info.html#gab12448dbdf69959889dc349ef75192f1">More...</a><br /></td></tr>
+<tr class="memdesc:gab12448dbdf69959889dc349ef75192f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for hardware build revision.  <a href="group__s_build_info.html#gab12448dbdf69959889dc349ef75192f1">More...</a><br /></td></tr>
 <tr class="separator:gab12448dbdf69959889dc349ef75192f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac92d08dee949ba3fbdf9f02c31021c32"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__s_build_info.html#gac92d08dee949ba3fbdf9f02c31021c32">SBUILD_DATE</a>&#160;&#160;&#160;buildInfo.buildDate</td></tr>
 <tr class="memdesc:gac92d08dee949ba3fbdf9f02c31021c32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Code snippet for build date.  <a href="group__s_build_info.html#gac92d08dee949ba3fbdf9f02c31021c32">More...</a><br /></td></tr>
@@ -131,7 +140,7 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >Simple Build Info library</p>
-<p >User must ensure <code>buildInfo</code> section exist in linker file. </p>
+<p >Library can be used only with GCC toolchain. User must ensure <code>buildInfo</code> section exists in linker file. </p>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga0171e1c527364c61edd4e6587d949b1e" name="ga0171e1c527364c61edd4e6587d949b1e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0171e1c527364c61edd4e6587d949b1e">&#9670;&#160;</a></span>SBUILD</h2>
@@ -176,21 +185,21 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
 <div class="line">        _rev, \</div>
 <div class="line">        _date \</div>
 <div class="line">    }</div>
-<div class="ttc" id="astructbuild__info__t_html"><div class="ttname"><a href="structbuild__info__t.html">build_info_t</a></div><div class="ttdoc">Struct for build info.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00070">sBuildInfo.h:70</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html"><div class="ttname"><a href="structbuild__info__t.html">build_info_t</a></div><div class="ttdoc">Struct for build info.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00098">sBuildInfo.h:98</a></div></div>
 </div><!-- fragment -->
-<p>Code snippet for creating build info struct in flash memory. </p>
-<p >Struct is placed inside <code>buildInfo</code> section in flash memory.</p>
+<p>Code snippet for creating build info data in flash memory. </p>
+<p >Data is placed inside <code>buildInfo</code> section in flash memory.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_name</td><td>Firmware name. Max 16 chars. </td></tr>
     <tr><td class="paramname">_ver</td><td>Firmware version. Max 16 chars. </td></tr>
     <tr><td class="paramname">_rev</td><td>Hardware revision. Max 16 chars. </td></tr>
-    <tr><td class="paramname">_date</td><td>Build date. Max 16 chars. </td></tr>
+    <tr><td class="paramname">_date</td><td>Build date. Max 12 chars. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00051">51</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00052">52</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -208,7 +217,79 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
 
 <p>Code snippet for build date. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00062">62</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00090">90</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="ga11c517c6ce1ee847fdabf024966d4905" name="ga11c517c6ce1ee847fdabf024966d4905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11c517c6ce1ee847fdabf024966d4905">&#9670;&#160;</a></span>SBUILD_EXT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SBUILD_EXT</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_tag, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_variant, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_ver, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_rev, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_date&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">const</span> <a class="code hl_struct" href="structbuild__info__t.html">build_info_t</a> buildInfo __attribute__((section(<span class="stringliteral">&quot;.buildInfo&quot;</span>))) = { \</div>
+<div class="line">        { \</div>
+<div class="line">            .<a class="code hl_variable" href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">tag</a> = _tag, \</div>
+<div class="line">            _variant \</div>
+<div class="line">        }, \</div>
+<div class="line">        _ver, \</div>
+<div class="line">        _rev, \</div>
+<div class="line">        _date \</div>
+<div class="line">    }</div>
+<div class="ttc" id="astructbuild__info__t_html_a316848252b46080ed793e24753bf7ca9"><div class="ttname"><a href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">build_info_t::tag</a></div><div class="ttdeci">const char tag[8]</div><div class="ttdoc">C-string for firmware tag.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00106">sBuildInfo.h:106</a></div></div>
+</div><!-- fragment -->
+<p>Code snippet for creating build info data in flash memory. </p>
+<p >With this snippet, firmware name is replaced with firmware tag and variant, both 8 characters long. Data is placed inside <code>buildInfo</code> section in flash memory.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_tag</td><td>Firmware tag. Max 8 chars. </td></tr>
+    <tr><td class="paramname">_variant</td><td>Firmware variant. Max 8 chars. </td></tr>
+    <tr><td class="paramname">_ver</td><td>Firmware version. Max 16 chars. </td></tr>
+    <tr><td class="paramname">_rev</td><td>Hardware revision. Max 16 chars. </td></tr>
+    <tr><td class="paramname">_date</td><td>Build date. Max 12 chars.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>GCC 11.3+ is needed for this snippet. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00074">74</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -219,14 +300,14 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define SBUILD_NAME&#160;&#160;&#160;buildInfo.fwName</td>
+          <td class="memname">#define SBUILD_NAME&#160;&#160;&#160;buildInfo.fw.name</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Code snippet for build firmware name. </p>
+<p>Code snippet for firmware build name. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00059">59</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00085">85</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -242,9 +323,45 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
       </table>
 </div><div class="memdoc">
 
-<p>Code snippet for build hardware revision. </p>
+<p>Code snippet for hardware build revision. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00061">61</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00089">89</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="ga87d2bceb8be1dc9da731239a74df0d34" name="ga87d2bceb8be1dc9da731239a74df0d34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87d2bceb8be1dc9da731239a74df0d34">&#9670;&#160;</a></span>SBUILD_TAG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SBUILD_TAG&#160;&#160;&#160;buildInfo.fw.tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Code snippet for firmware tag used in build. </p>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00086">86</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+
+</div>
+</div>
+<a id="gacb6039ec94c299b3f166f153f3229241" name="gacb6039ec94c299b3f166f153f3229241"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacb6039ec94c299b3f166f153f3229241">&#9670;&#160;</a></span>SBUILD_VARIANT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SBUILD_VARIANT&#160;&#160;&#160;buildInfo.fw.variant</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Code snippet for firmware variant used in build. </p>
+
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00087">87</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -260,9 +377,9 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
       </table>
 </div><div class="memdoc">
 
-<p>Code snippet for build firmware version. </p>
+<p>Code snippet for firmware build version. </p>
 
-<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00060">60</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="s_build_info_8h_source.html#l00088">88</a> of file <a class="el" href="s_build_info_8h_source.html">sBuildInfo.h</a>.</p>
 
 </div>
 </div>
@@ -271,7 +388,7 @@ const <a class="el" href="structbuild__info__t.html">build_info_t</a>&#160;</td>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Tue Mar 14 2023 19:29:09 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Fri Mar 17 2023 19:57:20 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>

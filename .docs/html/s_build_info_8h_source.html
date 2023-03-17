@@ -26,7 +26,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r1</span>
+   <div id="projectname">Simple Build Info<span id="projectnumber">&#160;v1.0r2</span>
    </div>
    <div id="projectbrief">Simple Build Info library for placing build info in flash memory.</div>
   </td>
@@ -117,47 +117,69 @@ $(document).ready(function(){initNavTree('s_build_info_8h_source.html',''); init
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define _SBUILDINFO_H_</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">// ----- CODE SNIPPETS</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga0171e1c527364c61edd4e6587d949b1e">   51</a></span><span class="comment"></span><span class="preprocessor">#define SBUILD(_name, _ver, _rev, _date) \</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">    const build_info_t buildInfo __attribute__((section(&quot;.buildInfo&quot;</span>))) = { \</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        _name, \</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        _ver, \</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        _rev, \</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        _date \</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">   59</a></span><span class="preprocessor">#define SBUILD_NAME         buildInfo.fwName </span></div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gab0bac7b74c9a7a6d3ba9f4aa7cf3c758">   60</a></span><span class="preprocessor">#define SBUILD_VER          buildInfo.fwVer </span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gab12448dbdf69959889dc349ef75192f1">   61</a></span><span class="preprocessor">#define SBUILD_REV          buildInfo.hwRev </span></div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gac92d08dee949ba3fbdf9f02c31021c32">   62</a></span><span class="preprocessor">#define SBUILD_DATE         buildInfo.buildDate </span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">// ----- STRUCTS</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="structbuild__info__t.html">   70</a></span><span class="comment"></span><span class="keyword">struct </span><a class="code hl_struct" href="structbuild__info__t.html">build_info_t</a> {</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315">   71</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315">fwName</a>[16]; </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1">   72</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1">fwVer</a>[16]; </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a1e989fd46a56827efe2a2d90f262d6c2">   73</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a1e989fd46a56827efe2a2d90f262d6c2">hwRev</a>[16]; </div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#af89d5d8d4fc9cb0cfea2c2c3833d28e3">   74</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#af89d5d8d4fc9cb0cfea2c2c3833d28e3">buildDate</a>[16]; </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment">// ----- EXTERNS</span></div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code hl_struct" href="structbuild__info__t.html">build_info_t</a> buildInfo;</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="preprocessor">#endif </span><span class="comment">// _SBUILDINFO_H_</span></div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="comment">// END WITH NEW LINE</span></div>
-<div class="ttc" id="astructbuild__info__t_html"><div class="ttname"><a href="structbuild__info__t.html">build_info_t</a></div><div class="ttdoc">Struct for build info.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00070">sBuildInfo.h:70</a></div></div>
-<div class="ttc" id="astructbuild__info__t_html_a1e989fd46a56827efe2a2d90f262d6c2"><div class="ttname"><a href="structbuild__info__t.html#a1e989fd46a56827efe2a2d90f262d6c2">build_info_t::hwRev</a></div><div class="ttdeci">char hwRev[16]</div><div class="ttdoc">C-string for hardware revision.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00073">sBuildInfo.h:73</a></div></div>
-<div class="ttc" id="astructbuild__info__t_html_a44ac198c82b37cc7a3a0fb6e26096fc1"><div class="ttname"><a href="structbuild__info__t.html#a44ac198c82b37cc7a3a0fb6e26096fc1">build_info_t::fwVer</a></div><div class="ttdeci">char fwVer[16]</div><div class="ttdoc">C-string for firmware version.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00072">sBuildInfo.h:72</a></div></div>
-<div class="ttc" id="astructbuild__info__t_html_ae48fec7a8dbe99f9438adbc3ab002315"><div class="ttname"><a href="structbuild__info__t.html#ae48fec7a8dbe99f9438adbc3ab002315">build_info_t::fwName</a></div><div class="ttdeci">char fwName[16]</div><div class="ttdoc">C-string for firmware name.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00071">sBuildInfo.h:71</a></div></div>
-<div class="ttc" id="astructbuild__info__t_html_af89d5d8d4fc9cb0cfea2c2c3833d28e3"><div class="ttname"><a href="structbuild__info__t.html#af89d5d8d4fc9cb0cfea2c2c3833d28e3">build_info_t::buildDate</a></div><div class="ttdeci">char buildDate[16]</div><div class="ttdoc">C-string for build date.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00074">sBuildInfo.h:74</a></div></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">// ----- CODE SNIPPETS</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga0171e1c527364c61edd4e6587d949b1e">   52</a></span><span class="comment"></span><span class="preprocessor">#define SBUILD(_name, _ver, _rev, _date) \</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">    const build_info_t buildInfo __attribute__((section(&quot;.buildInfo&quot;</span>))) = { \</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        _name, \</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        _ver, \</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        _rev, \</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        _date \</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga11c517c6ce1ee847fdabf024966d4905">   74</a></span><span class="preprocessor">#define SBUILD_EXT(_tag, _variant, _ver, _rev, _date) \</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">    const build_info_t buildInfo __attribute__((section(&quot;.buildInfo&quot;</span>))) = { \</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        { \</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            .tag = _tag, \</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            _variant \</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        }, \</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        _ver, \</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        _rev, \</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        _date \</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga2ab27d79a6190efd3c7b409203a5bb07">   85</a></span><span class="preprocessor">#define SBUILD_NAME         buildInfo.fw.name </span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__s_build_info.html#ga87d2bceb8be1dc9da731239a74df0d34">   86</a></span><span class="preprocessor">#define SBUILD_TAG          buildInfo.fw.tag </span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gacb6039ec94c299b3f166f153f3229241">   87</a></span><span class="preprocessor">#define SBUILD_VARIANT      buildInfo.fw.variant </span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gab0bac7b74c9a7a6d3ba9f4aa7cf3c758">   88</a></span><span class="preprocessor">#define SBUILD_VER          buildInfo.fwVer </span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gab12448dbdf69959889dc349ef75192f1">   89</a></span><span class="preprocessor">#define SBUILD_REV          buildInfo.hwRev </span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="group__s_build_info.html#gac92d08dee949ba3fbdf9f02c31021c32">   90</a></span><span class="preprocessor">#define SBUILD_DATE         buildInfo.buildDate </span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment">// ----- STRUCTS</span></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="structbuild__info__t.html">   98</a></span><span class="comment"></span><span class="keyword">struct </span><a class="code hl_struct" href="structbuild__info__t.html">build_info_t</a> {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="keyword">union </span>{</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#ac52fed95c2bcc7df714d44fe0b6a53be">  104</a></span>        <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#ac52fed95c2bcc7df714d44fe0b6a53be">name</a>[16]; </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">  106</a></span>            <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">tag</a>[8]; </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a5be57f336742b4e045e34993062dd249">  107</a></span>            <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a5be57f336742b4e045e34993062dd249">variant</a>[8]; </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        };</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a">  109</a></span>    } <a class="code hl_variable" href="structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a">fw</a>;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf">  110</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf">fwVer</a>[16]; </div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a0593166e277e1782cbe1cfbb4e543fb2">  111</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a0593166e277e1782cbe1cfbb4e543fb2">hwRev</a>[16]; </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a">  112</a></span>    <span class="keyword">const</span> <span class="keywordtype">char</span> <a class="code hl_variable" href="structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a">buildDate</a>[12]; </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>};</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment">// ----- EXTERNS</span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="keyword">extern</span> <span class="keyword">const</span> <a class="code hl_struct" href="structbuild__info__t.html">build_info_t</a> buildInfo;</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="preprocessor">#endif </span><span class="comment">// _SBUILDINFO_H_</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment">// END WITH NEW LINE</span></div>
+<div class="ttc" id="astructbuild__info__t_html"><div class="ttname"><a href="structbuild__info__t.html">build_info_t</a></div><div class="ttdoc">Struct for build info.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00098">sBuildInfo.h:98</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_a0593166e277e1782cbe1cfbb4e543fb2"><div class="ttname"><a href="structbuild__info__t.html#a0593166e277e1782cbe1cfbb4e543fb2">build_info_t::hwRev</a></div><div class="ttdeci">const char hwRev[16]</div><div class="ttdoc">C-string for hardware revision.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00111">sBuildInfo.h:111</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_a2a976bc5db0c2361747612e48a508ecf"><div class="ttname"><a href="structbuild__info__t.html#a2a976bc5db0c2361747612e48a508ecf">build_info_t::fwVer</a></div><div class="ttdeci">const char fwVer[16]</div><div class="ttdoc">C-string for firmware version.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00110">sBuildInfo.h:110</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_a316848252b46080ed793e24753bf7ca9"><div class="ttname"><a href="structbuild__info__t.html#a316848252b46080ed793e24753bf7ca9">build_info_t::tag</a></div><div class="ttdeci">const char tag[8]</div><div class="ttdoc">C-string for firmware tag.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00106">sBuildInfo.h:106</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_a5be57f336742b4e045e34993062dd249"><div class="ttname"><a href="structbuild__info__t.html#a5be57f336742b4e045e34993062dd249">build_info_t::variant</a></div><div class="ttdeci">const char variant[8]</div><div class="ttdoc">C-string for firmware variant name.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00107">sBuildInfo.h:107</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_a8ae62628acea300883bb6ce85662ae9a"><div class="ttname"><a href="structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a">build_info_t::buildDate</a></div><div class="ttdeci">const char buildDate[12]</div><div class="ttdoc">C-string for build date.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00112">sBuildInfo.h:112</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_ac52fed95c2bcc7df714d44fe0b6a53be"><div class="ttname"><a href="structbuild__info__t.html#ac52fed95c2bcc7df714d44fe0b6a53be">build_info_t::name</a></div><div class="ttdeci">const char name[16]</div><div class="ttdoc">C-string for firmware name.</div><div class="ttdef"><b>Definition:</b> <a href="s_build_info_8h_source.html#l00104">sBuildInfo.h:104</a></div></div>
+<div class="ttc" id="astructbuild__info__t_html_aff08327105c22f7492e60a2cd0b1814a"><div class="ttname"><a href="structbuild__info__t.html#aff08327105c22f7492e60a2cd0b1814a">build_info_t::fw</a></div><div class="ttdeci">union build_info_t::@0 fw</div><div class="ttdoc">Union of firmware name, tag and variant.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="s_build_info_8h.html">sBuildInfo.h</a></li>
-    <li class="footer">Generated on Tue Mar 14 2023 19:29:09 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
+    <li class="footer">Generated on Fri Mar 17 2023 19:57:20 for Simple Build Info by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5 </li>
   </ul>
 </div>
 </body>
