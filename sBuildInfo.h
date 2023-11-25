@@ -38,7 +38,7 @@ This License shall be included in all methodal textual files.
  * 
  * Define \c SBI_NO_FIX in build and build info will not be placed at fixed location in flash memory.
  * 
- * Set maximum length of build info by providing \c SBI_APP_NAME_LEN, \c SBI_APP_VER_LEN and \c SBI_APP_HW_LEN defines during build. Default length for info is 16 chars and 8 chars for application tag and variant.
+ * Set maximum length of build info by providing \c SBI_APP_NAME_LEN, \c SBI_APP_VER_LEN, \c SBI_APP_HW_LEN and \c SBI_APP_FLAGS_LEN defines during build. Default length for info is 16 chars(12 for build flags) and 8 chars for application tag and variant.
  * 
  * Build flags example:
  * - \c D for build with debug prints.
