@@ -40,11 +40,16 @@ This License shall be included in all methodal textual files.
  * 
  * Set maximum length of build info by providing \c SBI_APP_NAME_LEN, \c SBI_APP_VER_LEN and \c SBI_APP_HW_LEN defines during build. Default length for info is 16 chars and 8 chars for application tag and variant.
  * 
+ * Build flags example:
+ * - \c D for build with debug prints.
+ * - \c F for build with enabled FPU.
+ * - \c T for build with trace log system.
+ * 
  * @{
 */
 
 // ----- DEFINES
-#define SBI_VERSION					"v1.0r2" /**< @brief Library version string. */
+#define SBI_VERSION					"v1.0r3" /**< @brief Library version string. */
 
 #ifndef SBI_APP_NAME_LEN
 #define SBI_APP_NAME_LEN			16 /**< @brief Maximum length of application name. */
@@ -58,6 +63,10 @@ This License shall be included in all methodal textual files.
 #define SBI_APP_HW_LEN				16 /**< @brief Maximum length of hardware version. */
 #endif // SBI_APP_HW_LEN
 
+#ifndef SBI_APP_FLAGS_LEN
+#define SBI_APP_FLAGS_LEN			12 /**< @brief Maximum length of build flags. */
+#endif // SBI_APP_FLAGS_LEN
+
 
 
 // ----- CODE SNIPPETS
@@ -70,13 +79,16 @@ This License shall be included in all methodal textual files.
  * @param _name Application name. Max \c SBI_APP_NAME_LEN chars.
  * @param _ver Application version. Max \c SBI_APP_VER_LEN chars.
  * @param _rev Hardware revision. Max \c SBI_APP_HW_LEN chars.
+ * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
-#define __SBI(_name, _ver, _rev) \
-	static volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = { \
+#define __SBI(_name, _ver, _rev, _flags) \
+	static volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
+	{ \
 		_name, \
 		_ver, \
 		_rev, \
-		__DATE__ \
+		__DATE__, \
+		_flags \
 	}
 
 /**
@@ -89,10 +101,11 @@ This License shall be included in all methodal textual files.
  * @param _variant Application variant. Max \c SBI_APP_NAME_LEN/2 chars.
  * @param _ver Application version. Max \c SBI_APP_VER_LEN chars.
  * @param _rev Hardware revision. Max \c SBI_APP_HW_LEN chars.
+ * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  * 
  * @warning GCC 11.3+ is required for this snippet.
  */
-#define __SBI_EXT(_tag, _variant, _ver, _rev) \
+#define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
 	static volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
 	{ \
 		{ \
@@ -101,7 +114,8 @@ This License shall be included in all methodal textual files.
 		}, \
 		_ver, \
 		_rev, \
-		__DATE__ \
+		__DATE__, \
+		_flags \
 	}
 #else // SBI_NO_FIX
 /**
@@ -110,13 +124,16 @@ This License shall be included in all methodal textual files.
  * @param _name Application name. Max \c SBI_APP_NAME_LEN chars.
  * @param _ver Application version. Max \c SBI_APP_VER_LEN chars.
  * @param _rev Hardware revision. Max \c SBI_APP_HW_LEN chars.
+ * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
-#define __SBI(_name, _ver, _rev) \
-	static volatile const build_info_t __buildInfo = { \
+#define __SBI(_name, _ver, _rev, _flags) \
+	static volatile const build_info_t __buildInfo = \
+	{ \
 		_name, \
 		_ver, \
 		_rev, \
-		__DATE__ \
+		__DATE__, \
+		_flags \
 	}
 
 /**
@@ -128,10 +145,11 @@ This License shall be included in all methodal textual files.
  * @param _variant Application variant. Max \c SBI_APP_NAME_LEN/2 chars.
  * @param _ver Application version. Max \c SBI_APP_VER_LEN chars.
  * @param _rev Hardware revision. Max \c SBI_APP_HW_LEN chars.
+ * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  * 
  * @warning GCC 11.3+ is required for this snippet.
  */
-#define __SBI_EXT(_tag, _variant, _ver, _rev) \
+#define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
 	static volatile const build_info_t __buildInfo = \
 	{ \
 		{ \
@@ -140,17 +158,19 @@ This License shall be included in all methodal textual files.
 		}, \
 		_ver, \
 		_rev, \
-		__DATE__ \
+		__DATE__, \
+		_flags \
 	}
 #endif // SBI_NO_FIX
 
 
-#define __SBI_NAME()			__buildInfo.app.name /**< @brief Getter for application name. */
-#define __SBI_TAG()				__buildInfo.app.tag /**< @brief Getter for application tag. */
-#define __SBI_VARIANT()			__buildInfo.app.variant /**< @brief Getter for application variant. */
-#define __SBI_VER()				__buildInfo.appVer /**< @brief Getter for application version. */
-#define __SBI_HW()				__buildInfo.hwRev /**< @brief Getter for application hardware revision. */
-#define __SBI_DATE()			__buildInfo.buildDate /**< @brief Getter for application build date. Example date: \c Aug \c  8 \c 2019 (day is padded). */
+#define __SBI_NAME()			__buildInfo.app.name /**< @brief Function-like macro for application name. */
+#define __SBI_TAG()				__buildInfo.app.tag /**< @brief Function-like macro for application tag. */
+#define __SBI_VARIANT()			__buildInfo.app.variant /**< @brief Function-like macro for application variant. */
+#define __SBI_VER()				__buildInfo.appVer /**< @brief Function-like macro for application version. */
+#define __SBI_HW()				__buildInfo.hwRev /**< @brief Function-like macro for application hardware revision. */
+#define __SBI_DATE()			__buildInfo.buildDate /**< @brief Function-like macro for application build date. Example date: \c Aug \c  8 \c 2019 (day is padded). */
+#define __SBI_FLAGS()			__buildInfo.buildFlags /**< @brief Function-like macro for application build flags. Example: \c D flag for debug build. */
 #define __SBI_USED				(void)(__SBI_NAME()) /**< @brief Code snippet for preventing compiler from removing build info from flash memory. */
 
 
@@ -177,6 +197,7 @@ struct build_info_t
 	const char appVer[SBI_APP_VER_LEN]; /**< @brief C-string for application version. */
 	const char hwRev[SBI_APP_HW_LEN]; /**< @brief C-string for hardware revision. */
 	const char buildDate[12]; /**< @brief C-string for build date. */
+	const char buildFlags[SBI_APP_FLAGS_LEN]; /**< @brief C-string for build flags. */
 };
 
 
