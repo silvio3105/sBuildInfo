@@ -82,7 +82,7 @@ This License shall be included in all methodal textual files.
  * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
 #define __SBI(_name, _ver, _rev, _flags) \
-	static volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
+	volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
 	{ \
 		_name, \
 		_ver, \
@@ -106,7 +106,7 @@ This License shall be included in all methodal textual files.
  * @warning GCC 11.3+ is required for this snippet.
  */
 #define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
-	static volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
+	volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
 	{ \
 		{ \
 			.tag = _tag, \
@@ -127,7 +127,7 @@ This License shall be included in all methodal textual files.
  * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
 #define __SBI(_name, _ver, _rev, _flags) \
-	static volatile const build_info_t __buildInfo = \
+	volatile const build_info_t __buildInfo = \
 	{ \
 		_name, \
 		_ver, \
@@ -150,7 +150,7 @@ This License shall be included in all methodal textual files.
  * @warning GCC 11.3+ is required for this snippet.
  */
 #define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
-	static volatile const build_info_t __buildInfo = \
+	volatile const build_info_t __buildInfo = \
 	{ \
 		{ \
 			.tag = _tag, \
@@ -202,7 +202,7 @@ struct build_info_t
 
 
 // ----- EXTERNS
-extern const build_info_t __buildInfo;
+extern volatile const build_info_t __buildInfo;
 
 
 /** @} */
