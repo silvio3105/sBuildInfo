@@ -1,17 +1,18 @@
 
 # Simple Build Info library
 
-Simple Build Info is library that provides easy way to write build(compile) info into flash memory. Build Info is useful when verifying new firmware before firmware update via (custom) bootloader.
-User must create `buildInfo` section in GCC linker file. Recommendation is to place `buildInfo` section right below vector table.
+Simple Build Info is library that provides easy way to write build info into flash memory. Build info is useful when verifying new application before application update via (custom) bootloader.
+User must create `sBuildInfo` section in GCC linker script. Recommendation is to place `sBuildInfo` section right after vector table.
 
-Library documentation is available at `.docs/html/index.html`.
-Example applications are available at `examples` folder. All examples are made for STM32.
+It is recommended to define build info in `main.c` and place `SBI_USED` somewhere in `main()` so compiler does not remove build info from flash.
+
+Library documentation is available at `Documentation/html/index.html`.
+Example applications are available at `Examples` folder.
 
 
-# Linker file example
+# Linker script example
 
 ```
-/* Define output sections */
 SECTIONS
 {
   /* The startup code goes first into FLASH */
@@ -22,30 +23,15 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
-  /*.buildData :
-  {
-	. = ALIGN(4);
-    KEEP(*(.buildData))
-	. = ALIGN(4);
-  } >FLASH*/
-
-  /* The program code and other data goes into FLASH */
-  .text :
+  .sBuildInfo :
   {
     . = ALIGN(4);
-    *(.buildInfo)
-    *(.text)           /* .text sections (code) */
-    *(.text*)          /* .text* sections (code) */
-    *(.glue_7)         /* glue arm to thumb code */
-    *(.glue_7t)        /* glue thumb to arm code */
-    *(.eh_frame)
-
-    KEEP (*(.init))
-    KEEP (*(.fini))
-
+    KEEP(*(.sBuildInfo)) /* Build info */
     . = ALIGN(4);
-    _etext = .;        /* define a global symbols at end of code */
   } >FLASH
+
+  (...)
+}
 ```
 
 
