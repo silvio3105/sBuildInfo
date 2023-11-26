@@ -40,7 +40,7 @@ This License shall be included in all methodal textual files.
  * 
  * Set maximum length of build info by providing \c SBI_APP_NAME_LEN, \c SBI_APP_VER_LEN, \c SBI_APP_HW_LEN and \c SBI_APP_FLAGS_LEN defines during build. Default length for info is 16 chars(12 for build flags) and 8 chars for application tag and variant.
  * 
- * Build flags example:
+ * Build flags example: \c DFT (one character per build flag)
  * - \c D for build with debug prints.
  * - \c F for build with enabled FPU.
  * - \c T for build with trace log system.
