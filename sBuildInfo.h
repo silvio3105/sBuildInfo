@@ -49,7 +49,7 @@ This License shall be included in all methodal textual files.
 */
 
 // ----- DEFINES
-#define SBI_VERSION					"v1.0r3" /**< @brief Library version string. */
+#define SBI_VERSION					"v2.0r1" /**< @brief Library version string. */
 
 #ifndef SBI_APP_NAME_LEN
 #define SBI_APP_NAME_LEN			16 /**< @brief Maximum length of application name. */
