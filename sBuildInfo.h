@@ -3,14 +3,14 @@
  * @author silvio3105 (www.github.com/silvio3105)
  * @brief Simple Build Info library header file.
  * 
- * @copyright Copyright (c) 2023, silvio3105
+ * @copyright Copyright (c) 2025, silvio3105
  * 
  */
 
 /*
 License
 
-Copyright (c) 2023, silvio3105 (www.github.com/silvio3105)
+Copyright (c) 2025, silvio3105 (www.github.com/silvio3105)
 
 Access and use of this Project and its contents are granted free of charge to any Person.
 The Person is allowed to copy, modify and use The Project and its contents only for non-commercial use.
@@ -49,7 +49,7 @@ This License shall be included in all methodal textual files.
 */
 
 // ----- DEFINES
-#define SBI_VERSION					"v2.0r1" /**< @brief Library version string. */
+#define SBI_VERSION					"v2.0r2" /**< @brief Library version string. */
 
 #ifndef SBI_APP_NAME_LEN
 #define SBI_APP_NAME_LEN			16 /**< @brief Maximum length of application name. */
@@ -82,13 +82,14 @@ This License shall be included in all methodal textual files.
  * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
 #define __SBI(_name, _ver, _rev, _flags) \
-	volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
+	volatile const BuildInfo_s __sBuildInfo __attribute__((section(".sBuildInfo"))) = \
 	{ \
 		_name, \
 		_ver, \
 		_rev, \
 		__DATE__, \
-		_flags \
+		_flags, \
+		__TIME__ \
 	}
 
 /**
@@ -106,7 +107,7 @@ This License shall be included in all methodal textual files.
  * @warning GCC 11.3+ is required for this snippet.
  */
 #define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
-	volatile const build_info_t __buildInfo __attribute__((section(".sBuildInfo"))) = \
+	volatile const BuildInfo_s __sBuildInfo __attribute__((section(".sBuildInfo"))) = \
 	{ \
 		{ \
 			.tag = _tag, \
@@ -115,7 +116,8 @@ This License shall be included in all methodal textual files.
 		_ver, \
 		_rev, \
 		__DATE__, \
-		_flags \
+		_flags, \
+		__TIME__ \
 	}
 #else // SBI_NO_FIX
 /**
@@ -127,13 +129,14 @@ This License shall be included in all methodal textual files.
  * @param _flags Build flags. Max \c SBI_APP_FLAGS_LEN chars.
  */
 #define __SBI(_name, _ver, _rev, _flags) \
-	volatile const build_info_t __buildInfo = \
+	volatile const BuildInfo_s __sBuildInfo = \
 	{ \
 		_name, \
 		_ver, \
 		_rev, \
 		__DATE__, \
-		_flags \
+		_flags, \
+		__TIME__ \
 	}
 
 /**
@@ -150,7 +153,7 @@ This License shall be included in all methodal textual files.
  * @warning GCC 11.3+ is required for this snippet.
  */
 #define __SBI_EXT(_tag, _variant, _ver, _rev, _flags) \
-	volatile const build_info_t __buildInfo = \
+	volatile const BuildInfo_s __sBuildInfo = \
 	{ \
 		{ \
 			.tag = _tag, \
@@ -159,19 +162,21 @@ This License shall be included in all methodal textual files.
 		_ver, \
 		_rev, \
 		__DATE__, \
-		_flags \
+		_flags, \
+		__TIME__ \
 	}
 #endif // SBI_NO_FIX
 
 
-#define SBI_NAME				__buildInfo.app.name /**< @brief Macro for application name. */
-#define SBI_TAG					__buildInfo.app.tag /**< @brief Macro for application tag. */
-#define SBI_VARIANT				__buildInfo.app.variant /**< @brief Macro for application variant. */
-#define SBI_VER					__buildInfo.appVer /**< @brief Macro for application version. */
-#define SBI_HW					__buildInfo.hwRev /**< @brief Macro for application hardware revision. */
-#define SBI_DATE				__buildInfo.buildDate /**< @brief Macro for application build date. Example date: \c Aug \c  8 \c 2019 (day is padded). */
-#define SBI_FLAGS				__buildInfo.buildFlags /**< @brief Macro for application build flags. Example: \c D flag for debug build. */
-#define SBI_USED				(void)(SBI_NAME) /**< @brief Code snippet for preventing compiler from removing build info from flash memory. */
+#define SBI_APP_NAME				__sBuildInfo.app.name /**< @brief Macro for application name. */
+#define SBI_APP_TAG					__sBuildInfo.app.tag /**< @brief Macro for application tag. */
+#define SBI_APP_VARIANT				__sBuildInfo.app.variant /**< @brief Macro for application variant. */
+#define SBI_APP_VER					__sBuildInfo.appVer /**< @brief Macro for application version. */
+#define SBI_APP_HW					__sBuildInfo.hwRev /**< @brief Macro for application hardware revision. */
+#define SBI_APP_DATE				__sBuildInfo.buildDate /**< @brief Macro for application build date. Example date: \c Aug \c  8 \c 2019 (day is padded). */
+#define SBI_APP_FLAGS				__sBuildInfo.buildFlags /**< @brief Macro for application build flags. Example: \c D flag for debug build. */
+#define SBI_APP_TIME				__sBuildInfo.buildTime /**< @brief Macro for application build time. */
+#define SBI_APP_USED				(void)(SBI_NAME) /**< @brief Code snippet for preventing compiler from removing build info from flash memory. */
 
 
 // ----- STRUCTS
@@ -179,7 +184,7 @@ This License shall be included in all methodal textual files.
  * @brief Build info struct.
  * 
  */
-struct build_info_t
+struct BuildInfo_s
 {
 	/**
 	 * @brief Union of application name, tag and variant.
@@ -198,11 +203,12 @@ struct build_info_t
 	const char hwRev[SBI_APP_HW_LEN]; /**< @brief C-string for hardware revision. */
 	const char buildDate[12]; /**< @brief C-string for build date. */
 	const char buildFlags[SBI_APP_FLAGS_LEN]; /**< @brief C-string for build flags. */
+	const char buildTime[10]; /**< @brief C-string for build time. */
 };
 
 
 // ----- EXTERNS
-extern volatile const build_info_t __buildInfo;
+extern volatile const BuildInfo_s __sBuildInfo;
 
 
 /** @} */
