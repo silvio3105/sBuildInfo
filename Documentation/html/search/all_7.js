@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['variant_0',['variant',['../structbuild__info__t.html#afd053dd502ac4ff77f11f5e36b789bf2',1,'build_info_t']]]
+  ['name_0',['name',['../struct_build_info__s.html#a74285f810973463b7e586a07ee6af068',1,'BuildInfo_s']]]
 ];

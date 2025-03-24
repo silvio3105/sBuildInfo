@@ -29,7 +29,7 @@ var NAVTREE =
       [ "Linker script example", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "License", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
     ] ],
-    [ "Modules", "modules.html", "modules" ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

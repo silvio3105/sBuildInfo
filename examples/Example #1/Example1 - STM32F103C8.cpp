@@ -24,52 +24,22 @@
 
 
 // ----- INCLUDE FILES
-#include 			"Main.hpp"
 #include			"sBuildInfo.h"
 
 // Build info (will be placed at 0x10C, right after vector table)
 __SBI("SBI_FW", "v1.13.08rc5", "BluePill", "E");
 
 
-// ----- STATIC FUNCTION DECLARATIONS
-static void sysClockInit(void);
-
-
 // ----- APP ENTRY
 int main(void)
 {
-	HAL_Init();
-	sysClockInit();
-
 	// Just to make sure compiler does not remove build info
-	SBI_USED;
+	SBI_APP_USED;
 
 	// Print example:
-	// printf("FW version %s\nBuild date %s\n", SBI_VER, SBI_DATE);
+	// printf("FW version %s\nBuild date %s\n", SBI_APP_VER, SBI_APP_DATE);
 
 	while (1);
-}
-
-
-// ----- STATIC FUNCTION DEFINITIONS
-static void sysClockInit(void)
-{
-	RCC_OscInitTypeDef RCC_OscInitStruct = {0};
-	RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
-
-	RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
-	RCC_OscInitStruct.HSIState = RCC_HSI_ON;
-	RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
-	RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
-	HAL_RCC_OscConfig(&RCC_OscInitStruct);
-
-	RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
-															|RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-	RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-	RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-	RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
-	RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
-	HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0);
 }
 
 

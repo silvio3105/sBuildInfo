@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['build_5finfo_5ft_0',['build_info_t',['../structbuild__info__t.html',1,'']]]
+  ['buildinfo_5fs_0',['BuildInfo_s',['../struct_build_info__s.html',1,'']]]
 ];

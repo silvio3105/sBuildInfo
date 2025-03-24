@@ -1,10 +1,10 @@
 
 # Simple Build Info library
 
-Simple Build Info is library that provides easy way to write build info into flash memory. Build info is useful when verifying new application before application update via (custom) bootloader.
+Simple Build Info is library which provides easy way to write build info into flash memory. Build info is useful when verifying new application before application update via (custom) bootloader.
 User must create `sBuildInfo` section in GCC linker script. Recommendation is to place `sBuildInfo` section right after vector table.
 
-It is recommended to define build info in `main.c` and place `SBI_USED` somewhere in `main()` so compiler does not remove build info from flash.
+It is recommended to define build info in `main.c` and place `SBI_USED` somewhere in `main()` so compiler does not remove build info from the flash.
 
 Library documentation is available at `Documentation/html/index.html`.
 Example applications are available at `Examples` folder.
@@ -37,7 +37,7 @@ SECTIONS
 
 # License
 
-Copyright (c) 2023, silvio3105 (www.github.com/silvio3105)
+Copyright (c) 2025, silvio3105 (www.github.com/silvio3105)
 
 Access and use of this Project and its contents are granted free of charge to any Person.
 The Person is allowed to copy, modify and use The Project and its contents only for non-commercial use.
@@ -52,4 +52,4 @@ This License shall be included in all functional textual files.
 
 ---
 
-Copyright (c) 2023, silvio3105
+Copyright (c) 2025, silvio3105

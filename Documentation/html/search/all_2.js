@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['build_5finfo_5ft_0',['build_info_t',['../structbuild__info__t.html',1,'']]],
-  ['builddate_1',['buildDate',['../structbuild__info__t.html#a8ae62628acea300883bb6ce85662ae9a',1,'build_info_t']]],
-  ['buildflags_2',['buildFlags',['../structbuild__info__t.html#a1394d7db96603c43fc3f1bc6f8364234',1,'build_info_t']]]
+  ['build_20info_20library_0',['Simple Build Info library',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['builddate_1',['buildDate',['../struct_build_info__s.html#af5e3d4ea17b2cfa90f28c0cc69713332',1,'BuildInfo_s']]],
+  ['buildflags_2',['buildFlags',['../struct_build_info__s.html#aa213f22ba13946864b61c7c0525f511a',1,'BuildInfo_s']]],
+  ['buildinfo_5fs_3',['BuildInfo_s',['../struct_build_info__s.html',1,'']]],
+  ['buildtime_4',['buildTime',['../struct_build_info__s.html#a50d6db295a7bc632ff7753bcdb563ceb',1,'BuildInfo_s']]]
 ];

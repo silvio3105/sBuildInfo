@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['tag_0',['tag',['../structbuild__info__t.html#a0b224a9c55f8c8d5bc7dd53299aa2c67',1,'build_info_t']]]
+  ['library_0',['Simple Build Info library',['../md__r_e_a_d_m_e.html',1,'']]],
+  ['license_1',['License',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['linker_20script_20example_2',['Linker script example',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];

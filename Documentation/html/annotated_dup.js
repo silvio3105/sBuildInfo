@@ -1,4 +1,4 @@
 var annotated_dup =
 [
-    [ "build_info_t", "structbuild__info__t.html", "structbuild__info__t" ]
+    [ "BuildInfo_s", "struct_build_info__s.html", "struct_build_info__s" ]
 ];
