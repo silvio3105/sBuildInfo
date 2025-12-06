@@ -2,7 +2,7 @@
 # Simple Build Info library
 
 Simple Build Info is library which provides easy way to write build info into flash memory. Build info is useful when verifying new application before application update via (custom) bootloader.
-User must create `sBuildInfo` section in GCC linker script. Recommendation is to place `sBuildInfo` section right after vector table.
+If build info have to be at fixed location in flash memory, `sBuildInfo` section in GCC linker script has to be created. It is recommended to place `sBuildInfo` section right after vector table.
 
 It is recommended to define build info in `main.c` and place `SBI_USED` somewhere in `main()` so compiler does not remove build info from the flash.
 
@@ -26,7 +26,7 @@ SECTIONS
   .sBuildInfo :
   {
     . = ALIGN(4);
-    KEEP(*(.sBuildInfo)) /* Build info */
+    KEEP(*(.sBuildInfo)) /* Simple Build Info */
     . = ALIGN(4);
   } >FLASH
 

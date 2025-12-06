@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hwrev_0',['hwRev',['../struct_build_info__s.html#aa518feefaa2f42f8f7bbc34c5b063a5a',1,'BuildInfo_s']]]
+  ['flags_0',['flags',['../structs_build_info__s.html#a9ca81fbfcec91e37d435c161a345fe9a',1,'sBuildInfo_s']]]
 ];
