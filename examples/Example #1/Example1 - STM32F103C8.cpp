@@ -34,7 +34,7 @@ __SBI("SBI_FW", "v1.13.08rc5", "BluePill", "E");
 int main(void)
 {
 	// Just to make sure compiler does not remove build info
-	SBI_APP_USED;
+	SBI_USED;
 
 	// Print example:
 	// printf("FW version %s\nBuild date %s\n", SBI_APP_VER, SBI_APP_DATE);

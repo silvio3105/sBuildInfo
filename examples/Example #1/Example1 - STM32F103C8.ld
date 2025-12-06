@@ -59,7 +59,7 @@ SECTIONS
   .sBuildInfo :
   {
     . = ALIGN(4);
-    KEEP(*(.sBuildInfo)) /* Build info */
+    KEEP(*(.sBuildInfo)) /* Simple Build Info */
     . = ALIGN(4);
   } >FLASH
 
