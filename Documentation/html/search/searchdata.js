@@ -1,30 +1,27 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdefhilnstv",
+  0: "_adefhlnstv",
   1: "s",
-  2: "s",
-  3: "cdfhnstv",
-  4: "s",
-  5: "bils"
+  2: "dfhnstv",
+  3: "s",
+  4: "aels"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "files",
-  3: "variables",
-  4: "groups",
-  5: "pages"
+  2: "variables",
+  3: "groups",
+  4: "pages"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Files",
-  3: "Variables",
-  4: "Modules",
-  5: "Pages"
+  2: "Variables",
+  3: "Modules",
+  4: "Pages"
 };
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['date_0',['date',['../structs_build_info__s.html#a9a45b4fb34fa34e3aeb28acb1dc839f8',1,'sBuildInfo_s']]]
+  ['flags_0',['flags',['../structs_build_info__s.html#a5b4633a023f32d01a8d36399411e19d3',1,'sBuildInfo_s']]]
 ];

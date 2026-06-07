@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['info_20library_0',['Simple Build Info library',['../md__r_e_a_d_m_e.html',1,'']]]
+  ['name_0',['name',['../structs_build_info__s.html#a9e681d07d1d119f1f507bcd1eeb77767',1,'sBuildInfo_s']]]
 ];

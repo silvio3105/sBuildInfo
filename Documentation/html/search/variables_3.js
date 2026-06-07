@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hardware_0',['hardware',['../structs_build_info__s.html#a49353f8c0306febc42137230e2db5cfa',1,'sBuildInfo_s']]]
+  ['name_0',['name',['../structs_build_info__s.html#a9e681d07d1d119f1f507bcd1eeb77767',1,'sBuildInfo_s']]]
 ];

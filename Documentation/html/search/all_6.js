@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['hardware_0',['hardware',['../structs_build_info__s.html#a49353f8c0306febc42137230e2db5cfa',1,'sBuildInfo_s']]]
+  ['license_0',['License',['../md__r_e_a_d_m_e.html#autotoc_md2',1,'']]],
+  ['linker_20script_20example_1',['Linker script example',['../md__r_e_a_d_m_e.html#autotoc_md1',1,'']]]
 ];

@@ -24,8 +24,8 @@
 */
 var NAVTREE =
 [
-  [ "Simple Build Info", "index.html", [
-    [ "Simple Build Info library", "md__r_e_a_d_m_e.html", [
+  [ "sBuildInfo", "index.html", [
+    [ "About", "md__r_e_a_d_m_e.html", [
       [ "Linker script example", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "License", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
     ] ],
@@ -39,11 +39,7 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Macros", "globals_defs.html", null ]
-      ] ]
+      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
@@ -53,5 +49,6 @@ var NAVTREEINDEX =
 "annotated.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+const SYNCONMSG = 'click to disable panel synchronization';
+const SYNCOFFMSG = 'click to enable panel synchronization';
+const LISTOFALLMEMBERS = 'List of all members';
