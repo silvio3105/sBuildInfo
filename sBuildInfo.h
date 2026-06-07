@@ -42,7 +42,7 @@
 */
 
 // ----- DEFINES
-#define SBI_VERSION					"v4.0r1" /**< @brief Library version string. */
+#define __SBI_VERSION				"v4.0r1" /**< @brief Library version string. */
 
 #ifndef SBI_NAME_LEN
 #define SBI_NAME_LEN				16 /**< @brief Maximum length of build name in bytes. */
@@ -100,7 +100,7 @@
 #define SBI_NAME					__sBuildInfo.name /**< @brief Macro for build name. */
 #define SBI_VERSION					__sBuildInfo.version /**< @brief Macro for build version. */
 #define SBI_HARDWARE				__sBuildInfo.hardware /**< @brief Macro for build hardware version. */
-#define SBI_DATE					__sBuildInfo.date /**< @brief Macro for build date. Example date: \c Aug \c  8 \c 2019 (day is padded). */
+#define SBI_DATE					__sBuildInfo.date /**< @brief Macro for build date. Example date: \c Aug \c  4 \c 2019 (day is padded). */
 #define SBI_TIME					__sBuildInfo.time /**< @brief Macro for build time. */
 #define SBI_FLAGS					__sBuildInfo.flags /**< @brief Macro for build flags. Example: \c 0b10 flag for debug build. */
 #define SBI_SIZE					__sBuildInfo.size /**< @brief Macro for build size in bytes. */
