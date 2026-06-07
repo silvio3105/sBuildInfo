@@ -88,7 +88,7 @@
 	volatile const sBuildInfo_s __sBuildInfo __SECTION(".sBuildInfo") = \
 	{ \
 		0xFFFFFFFF, \
-		0xFFFFFFFF \
+		0xFFFFFFFF, \
 		_name, \
 		_version, \
 		_hardware, \
