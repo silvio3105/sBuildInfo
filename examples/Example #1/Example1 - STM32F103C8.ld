@@ -56,10 +56,11 @@ SECTIONS
     . = ALIGN(4);
   } >FLASH
 
+  /* Simple Build Info */
   .sBuildInfo :
   {
     . = ALIGN(4);
-    KEEP(*(.sBuildInfo)) /* Simple Build Info */
+    KEEP(*(.sBuildInfo))
     . = ALIGN(4);
   } >FLASH
 

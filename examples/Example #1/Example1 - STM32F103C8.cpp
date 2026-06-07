@@ -3,43 +3,63 @@
  * @author silvio3105 (www.github.com/silvio3105)
  * @brief Main source file.
  * 
- * @copyright Copyright (c) 2023, silvio3105
+ * @copyright Copyright (c) 2026, silvio3105 (www.github.com/silvio3105)
  * 
  */
 
 /*
-	Copyright (c) 2023, silvio3105 (www.github.com/silvio3105)
+	Copyright (c) 2026, silvio3105 (www.github.com/silvio3105)
 
 	Access and use of this Project and its contents are granted free of charge to any Person.
-	The Person is allowed to copy, modify and use The Project and its contents only for non-commercial use.
-	Commercial use of this Project and its contents is prohibited.
-	Modifying this License and/or sublicensing is prohibited.
+	The Person is allowed to copy, modify and use The Project and its contents only for education and DIY purposes.
+	Commercial use of the Project, in whole or in part, is prohibited without prior written permission from the Author.
+	This License may not be modified and no sublicense may be granted.
 
-	THE PROJECT AND ITS CONTENT ARE PROVIDED "AS IS" WITH ALL FAULTS AND WITHOUT EXPRESSED OR IMPLIED WARRANTY.
-	THE AUTHOR KEEPS ALL RIGHTS TO CHANGE OR REMOVE THE CONTENTS OF THIS PROJECT WITHOUT PREVIOUS NOTICE.
-	THE AUTHOR IS NOT RESPONSIBLE FOR DAMAGE OF ANY KIND OR LIABILITY CAUSED BY USING THE CONTENTS OF THIS PROJECT.
+	THE PROJECT AND ITS CONTENTS ARE PROVIDED "AS IS" WITH ALL FAULTS AND WITHOUT EXPRESS OR IMPLIED WARRANTY.
+	THE AUTHOR KEEPS ALL RIGHTS TO CHANGE OR REMOVE THE CONTENTS OF THIS PROJECT WITHOUT PRIOR NOTICE.
+	IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY ARISING FROM THE USE OF THE PROJECT.
 
-	This License shall be included in all functional textual files.
+	A copy of this License must be included with all copies and substantial portions of the Project.
 */
 
-
 // ----- INCLUDE FILES
+#include			"SEGGER_RTT.h"
 #include			"sBuildInfo.h"
 
-// Build info (will be placed at 0x10C, right after vector table)
-__SBI("SBI_FW", "v1.13.08rc5", "BluePill", "E");
+#include			<stdio.h>
 
 
-// ----- APP ENTRY
+// ----- VARIABLES
+__SBI("Test_FW", "v1.0.0rc1", "v4.2.0", "");
+
+
+// ----- FUNCTION DEFINITIONS
+/**
+ * @brief Application main function.
+ * 
+ * @return No return value.
+ */
 int main(void)
 {
-	// Just to make sure compiler does not remove build info
-	SBI_USED;
+	char tmp[86];
+	uint8_t len = snprintf(tmp, sizeof(tmp), "\n\nBuild %s %s\nHW %s\n%s %s\n%luB\nHash %08lX\n---",
+	SBI_NAME, SBI_VERSION,
+	SBI_HARDWARE,
+	SBI_DATE,
+	SBI_TIME,
+	SBI_SIZE,
+	SBI_HASH);
 
-	// Print example:
-	// printf("FW version %s\nBuild date %s\n", SBI_APP_VER, SBI_APP_DATE);
-
-	while (1);
+	SEGGER_RTT_Init();
+	
+	while(1)
+	{
+		SEGGER_RTT_Write(0, tmp, len);
+		for (uint32_t i = 0; i < 0xFFFFFF; i++)
+		{
+			(void)i;
+		}
+	}
 }
 
 
